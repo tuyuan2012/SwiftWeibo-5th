@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="r49-EN-apZ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="aZL-If-QZs">
+            <objects>
+                <viewController id="r49-EN-apZ" customClass="WelcomeViewController" customModule="XMGWB" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aOG-cJ-bCz"/>
+                        <viewControllerLayoutGuide type="bottom" id="33N-pM-gc6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ema-r5-xyc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad_background" translatesAutoresizingMaskIntoConstraints="NO" id="C4N-1B-Uxd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_default_big" translatesAutoresizingMaskIntoConstraints="NO" id="UqS-dq-5S0">
+                                <rect key="frame" x="255" y="350" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="Rhp-1p-Nfp"/>
+                                    <constraint firstAttribute="width" constant="90" id="t2R-3m-jo0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎回来" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9J-hN-Vs5">
+                                <rect key="frame" x="256" y="460" width="88" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UqS-dq-5S0" firstAttribute="centerX" secondItem="ema-r5-xyc" secondAttribute="centerX" id="1vG-hX-LW3"/>
+                            <constraint firstItem="r9J-hN-Vs5" firstAttribute="centerX" secondItem="UqS-dq-5S0" secondAttribute="centerX" id="2re-f0-YnT"/>
+                            <constraint firstItem="33N-pM-gc6" firstAttribute="top" secondItem="C4N-1B-Uxd" secondAttribute="bottom" id="C2w-0f-T1f"/>
+                            <constraint firstItem="r9J-hN-Vs5" firstAttribute="top" secondItem="UqS-dq-5S0" secondAttribute="bottom" constant="20" id="LBj-ww-nRa"/>
+                            <constraint firstItem="33N-pM-gc6" firstAttribute="top" secondItem="UqS-dq-5S0" secondAttribute="bottom" constant="160" id="P7c-sL-75d"/>
+                            <constraint firstAttribute="trailing" secondItem="C4N-1B-Uxd" secondAttribute="trailing" id="lu7-eL-rXD"/>
+                            <constraint firstItem="C4N-1B-Uxd" firstAttribute="top" secondItem="ema-r5-xyc" secondAttribute="top" id="sMj-0T-bNc"/>
+                            <constraint firstItem="C4N-1B-Uxd" firstAttribute="leading" secondItem="ema-r5-xyc" secondAttribute="leading" id="sRf-kG-XFw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="iconBottomCons" destination="P7c-sL-75d" id="mTL-sy-Mvk"/>
+                        <outlet property="iconView" destination="UqS-dq-5S0" id="e9w-Yt-hBQ"/>
+                        <outlet property="tipLabel" destination="r9J-hN-Vs5" id="kVL-QW-7Fu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DNJ-vm-Ddf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="451" y="492"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ad_background" width="320" height="480"/>
+        <image name="avatar_default_big" width="85" height="85"/>
+    </resources>
+</document>
